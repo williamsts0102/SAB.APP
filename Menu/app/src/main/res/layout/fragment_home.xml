@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextDepartamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Departamento" />
+
+    <EditText
+        android:id="@+id/editTextProvincia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Provincia" />
+
+    <EditText
+        android:id="@+id/editTextDistrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Distrito" />
+
+    <EditText
+        android:id="@+id/editTextDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dirección" />
+
+    <EditText
+        android:id="@+id/editTextLatitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Latitud" />
+
+    <EditText
+        android:id="@+id/editTextLongitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Longitud" />
+
+    <EditText
+        android:id="@+id/editTextDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar" />
+</LinearLayout>
