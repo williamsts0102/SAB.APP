@@ -1,17 +1,17 @@
 package com.example.menu.Models;
 
 public class PersonalRequest {
-    private int pintIdPersonal;
+    private int idPersonal;
 
-    public PersonalRequest(int pintIdPersonal) {
-        this.pintIdPersonal = pintIdPersonal;
+    public PersonalRequest(int idPersonal) {
+        this.idPersonal = idPersonal;
     }
 
-    public int getPintIdPersonal() {
-        return pintIdPersonal;
+    public int getIdPersonal() {
+        return idPersonal;
     }
 
-    public void setPintIdPersonal(int pintIdPersonal) {
-        this.pintIdPersonal = pintIdPersonal;
+    public void setIdPersonal(int idPersonal) {
+        this.idPersonal = idPersonal;
     }
 }

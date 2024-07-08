@@ -26,21 +26,30 @@ public class AdapterPersona extends RecyclerView.Adapter<AdapterPersona.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_alerta, parent, false); // Asegúrate de tener un layout correcto para cada elemento de Alerta
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_settings, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         Alerta alerta = alertas.get(position);
 
-        if (alerta != null) {
+        // Verificar si la lista está vacía
+        if (alerta == null) {
+            holder.itemView.setVisibility(View.GONE);
+        } else {
             holder.itemView.setVisibility(View.VISIBLE);
             holder.textViewCodAlerta.setText(alerta.getStrCodAlerta());
             holder.textViewDescripcion.setText(alerta.getStrDescripcion());
-            // Asignar otros datos aquí
-        } else {
-            holder.itemView.setVisibility(View.GONE);
+            holder.textViewGrupoPersonal.setText(alerta.getStrNombreGrupoPersonal());
+            holder.textViewDepartamento.setText(alerta.getStrDepartamento());
+            holder.textViewProvincia.setText(alerta.getStrProvincia());
+            holder.textViewDistrito.setText(alerta.getStrDistrito());
+            holder.textViewDireccion.setText(alerta.getStrDireccion());
+            holder.textViewLatitud.setText(alerta.getStrLatitud());
+            holder.textViewLongitud.setText(alerta.getStrLongitud());
+            // Set other views here
         }
     }
 
@@ -52,12 +61,20 @@ public class AdapterPersona extends RecyclerView.Adapter<AdapterPersona.ViewHold
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView textViewCodAlerta;
         TextView textViewDescripcion;
-        // Otros TextViews
+        TextView textViewGrupoPersonal;
+        TextView textViewDepartamento;
+        TextView textViewProvincia;
+        TextView textViewDistrito;
+        TextView textViewDireccion;
+        TextView textViewLatitud;
+        TextView textViewLongitud;
+        // Define other views here
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textViewCodAlerta = itemView.findViewById(R.id.text_view_cod_alerta); // Asegúrate de tener los IDs correctos
-            textViewDescripcion = itemView.findViewById(R.id.text_view_descripcion); // IDs de los otros TextViews
-        }
-    }
+            textViewCodAlerta = itemView.findViewById(R.id.text_view_cod_alerta);
+            textViewDescripcion = itemView.findViewById(R.id.text_view_descripcion);
+            // Initialize other views here
+}
+}
 }
